@@ -5,29 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-image-logo-container">
-            <img th:src="@{/images/apc-bg.png}" alt="Logo PUC Minas">
-        </div>
-        <div class="login-form">
-            <form th:action="@{/login}" method="post" class="login-form">
-                <h4 class="login-title">Login</h4>
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <input type="password" id="password" name="password" placeholder="Senha" required>
-                <div class="login-button-container">
-                    <button type="submit">Entrar</button>
-                </div>
-                <p class="login-redirect-options">
-                    Ainda não tem cadastro? <br>
-                    <a href="/register">Cadastre-se</a>
-                    <a href="/recoverpassword">Esqueceu sua senha?</a>
-                </p>
-            </form>
-        </div>
+    <div class="auth-container">
+        <img th:src="@{/images/brasao-pucminas-2025-versao-positiva.png}" alt="brasao">
+        <form th:action="@{/login}" method="post" class="auth-form">
+            <h4 class="auth-title">Login</h4>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <div class="auth-button-container">
+                <button type="submit">Entrar</button>
+            </div>
+            <p class="auth-redirect-options">
+                Ainda não tem cadastro? <br>
+                <a href="/register">Cadastre-se</a>
+                <a href="/recoverpassword">Esqueceu sua senha?</a>
+            </p>
+        </form>
     </div>
 </body>
 
