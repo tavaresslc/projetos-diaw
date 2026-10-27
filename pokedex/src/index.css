@@ -1,0 +1,128 @@
+:root {
+  --bg: #f1f3f9;
+  --bg-grad: radial-gradient(circle at 15% 0%, #ffe3e3 0, transparent 45%),
+    radial-gradient(circle at 90% 10%, #dfe8ff 0, transparent 40%);
+  --surface: #ffffff;
+  --surface-2: #eef0f7;
+  --text: #1c2033;
+  --muted: #6b7190;
+  --border: #dfe2ee;
+  --accent: #e53935;
+  --accent-2: #ffcb05;
+  --shadow: 0 6px 20px rgba(30, 40, 90, 0.1);
+  --radius: 18px;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f1221;
+  --bg-grad: radial-gradient(circle at 15% 0%, #3a1520 0, transparent 45%),
+    radial-gradient(circle at 90% 10%, #16214a 0, transparent 40%);
+  --surface: #1a1e36;
+  --surface-2: #252a48;
+  --text: #eef0ff;
+  --muted: #9aa0c4;
+  --border: #2f3560;
+  --shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg) var(--bg-grad) fixed;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.muted {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn-active {
+  background: var(--accent-2);
+  color: #3a2f00;
+  border-color: var(--accent-2);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.empty {
+  text-align: center;
+  padding: 56px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.empty_emoji {
+  font-size: 3rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}

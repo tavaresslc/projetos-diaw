@@ -1,0 +1,35 @@
+.stat {
+  display: grid;
+  grid-template-columns: 62px 34px 1fr;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.stat_label {
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.stat_value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.stat_value-better {
+  color: #2ea043;
+}
+
+.stat_track {
+  height: 8px;
+  background: rgba(127, 127, 127, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stat_fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
